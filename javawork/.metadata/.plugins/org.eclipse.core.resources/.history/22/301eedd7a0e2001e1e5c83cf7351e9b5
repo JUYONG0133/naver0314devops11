@@ -1,0 +1,17 @@
+package day0315;
+
+import java.util.Scanner;
+
+public class Ex12_Munje {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num;
+		System.out.println("점수를 입력하세요");
+		num=sc.nextInt();
+		String msg;
+		msg = num>=90 ? "참": "ㅅ";
+		System.out.println(msg);
+	}
+
+}
