@@ -1,0 +1,12 @@
+package day0318;
+
+public class Ex02_AsciiCode {
+
+	public static void main(String[] args) {
+		char a = 'A';
+		char a1 = 65;
+		System.out.println(a+"  "+a1);
+
+	}
+
+}

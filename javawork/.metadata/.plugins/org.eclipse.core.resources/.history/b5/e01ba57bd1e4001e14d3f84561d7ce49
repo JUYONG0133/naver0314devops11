@@ -1,0 +1,24 @@
+package day0318;
+
+import java.util.Scanner;
+
+public class Ex05_Switch {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int y,m,d;
+		System.out.println("년도를 입력하세요 ");
+		y = sc.nextInt();
+		
+		if(y%4==0) {
+			System.out.println(y+"년은 윤년입니다.");
+		}
+		else {
+			System.out.println(y+"년은 평년입니다.");
+		}
+		
+	}
+
+}
