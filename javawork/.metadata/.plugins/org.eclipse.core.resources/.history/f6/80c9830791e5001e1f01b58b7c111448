@@ -1,0 +1,20 @@
+package day0319;
+
+public class test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num=1,num1=0;
+		
+		for(int i = 1; i <= 10; i++) {
+			num*=i;
+			
+			System.out.println(num);
+		}
+		
+	}
+
+}
+
+
+//3! = 3*2*1;
