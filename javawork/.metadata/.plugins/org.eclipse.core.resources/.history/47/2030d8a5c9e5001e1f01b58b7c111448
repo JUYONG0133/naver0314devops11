@@ -1,0 +1,43 @@
+package day0319;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Ex11_StringMunje {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String msg = sc.nextLine();
+		System.out.println(msg.length());
+		System.out.println(msg.trim());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		StringTokenizer st = new StringTokenizer(msg," ");
+//		System.out.println(st.countTokens());
+//		while(st.hasMoreElements()) {
+//			System.out.println(st.nextToken());
+//			if()
+		}
+	}
+
+
