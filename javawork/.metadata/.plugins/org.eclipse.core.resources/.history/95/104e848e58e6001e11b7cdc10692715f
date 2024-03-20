@@ -1,0 +1,28 @@
+package day0320;
+
+import java.util.Scanner;
+
+public class Ex03_RandomGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		int input;
+		int count=0;
+		int random;
+		char yn;
+		while(true) {
+			double d = (Math.random()*100)+1;
+			input = sc.nextInt();
+			count++;
+			System.out.println(d);
+			if(input==d) {
+				System.out.println("정답");
+				break;
+			}
+			
+		}
+	}
+
+}

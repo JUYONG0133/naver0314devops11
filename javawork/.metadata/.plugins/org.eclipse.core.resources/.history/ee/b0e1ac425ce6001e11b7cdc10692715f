@@ -1,0 +1,30 @@
+package day0320;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ex03_RandomGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random rd = new Random();
+		Scanner sc = new Scanner(System.in);
+		int input;
+		int count=0;
+		int random;
+		char yn;
+		random = rd.nextInt(100);
+		while(true) {
+			input = sc.nextInt();
+			count++;
+			
+			System.out.println(random);
+			if(input==random) {
+				System.out.println("정답");
+				break;
+			}
+			
+		}
+	}
+
+}
