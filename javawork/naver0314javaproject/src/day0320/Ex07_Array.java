@@ -24,7 +24,7 @@ public class Ex07_Array {
 				mcnt++;
 		}
 		System.out.println("배열에 포함된 양수 값 : "+pcnt+"개");
-		System.out.println("배열에 포함된 수 값 : "+mcnt+"개");
+		System.out.println("배열에 포함된 음수 값 : "+mcnt+"개");
 	}
 
 }
