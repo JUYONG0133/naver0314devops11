@@ -1,0 +1,21 @@
+package day0321;
+
+public class Ex03_ArrayStringSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String []arr1 = {"하석진","강호동","강호마","Candy","손석구"};
+		// 문자열 정렬
+		for(int i = 0; i < arr1.length-1; i++) {
+			for(int j=i+1; j < arr1.length; j ++) {
+				//기준값이 더 클경우 양수 값이 발생
+				if(arr1[i].compareTo(arr1[j])>0) {
+					String stemp = arr1[i];
+					arr1[i] = arr1[j];
+					arr1[j] = stemp;
+				}
+			}
+		}
+	}
+
+}
