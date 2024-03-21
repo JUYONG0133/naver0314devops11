@@ -1,0 +1,43 @@
+package day0321;
+
+import java.util.Scanner;
+
+public class Ex09_Array2ChaBinggo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][] arr = new int[3][3];
+		int binggo;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("=".repeat(15));
+		while(true) {
+			binggo = 0;
+			for(int i = 0; i < arr.length; i++) {
+				for(int j = 0; j < arr[i].length; j++) {
+					arr[i][j] = (int)(Math.random()*3)+1;
+				}
+			}
+			for(int i = 0; i < arr.length; i++) {
+				for(int j = 0; j < arr[i].length; j++) {
+					System.out.printf("%4d",arr[i][j]);
+				}
+				System.out.println("");
+			}
+			
+			
+			
+			
+			
+			System.out.println("=".repeat(15));
+			String ans = sc.nextLine();
+			if(ans.equalsIgnoreCase("x")){{
+				System.out.println("빙고 게임을 종료합니다.");
+				break;
+			}
+			
+		}
+	}
+	}
+}
+
+

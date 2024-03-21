@@ -54,7 +54,6 @@ public class Ex06_ArrayLotto {
 				System.out.println();
 				System.out.println("=".repeat(50));
 				System.out.println();
-				
 			}
 		}
 	}
