@@ -1,0 +1,31 @@
+package day0321;
+
+import java.util.Scanner;
+
+public class Book199_9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		
+		Loop:
+		while(true) {
+			int key1;
+			System.out.println("=".repeat(50));
+			System.out.println("1.학생수\t2.점수입력\t3.점수리스트\t4.분석\t5.종료");
+			System.out.println("=".repeat(50));
+			System.out.print("선택 > ");
+			key1 = Integer.parseInt(sc.nextLine());
+			
+			switch(key1) {
+				case 1: 
+					System.out.print("학생수 > ");
+					int fir = Integer.parseInt(sc.nextLine());
+					int key[] = new int[fir];
+					continue Loop;
+			}
+		}
+	}
+
+}
