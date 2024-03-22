@@ -67,18 +67,14 @@ public class Ex03_StaticMethod {
 		sang1.setDan(2300);
 		Myshop.setMessge("오늘 각종 과일 세일합니다");
 		sang1.writeData();
-		///
 		System.out.println("==상품2==");
 		sang2.setData("수박", 5, 2000);
 		sang2.writeData();
-		///
 		System.out.println("==상품3==");
 		sang3.setData("참외", 5, 2000,"오늘세일 마감");
 		sang3.writeData();
-		///
 		System.out.println("==상품1다시출력==");
 		sang1.writeData();
-		///
 		System.out.println("==상품2의수량만출력==");
 		sang2.setSu(5);
 		sang2.writeData();
