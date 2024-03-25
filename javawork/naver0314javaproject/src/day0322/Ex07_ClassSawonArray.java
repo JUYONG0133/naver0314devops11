@@ -11,11 +11,11 @@ public class Ex07_ClassSawonArray {
 		Scanner sc = new Scanner(System.in);
 		
 		for(int i =0 ; i<sa.length; i++) {
-			System.out.println("사원명은 ? ");
+			System.out.print("사원명은 ? ");
 			String name = sc.nextLine();
-			System.out.println("기본급은 ? ");
+			System.out.print("기본급은 ? ");
 			int gibon = Integer.parseInt(sc.nextLine());
-			System.out.println("수당은 ? ");
+			System.out.print("수당은 ? ");
 			int sudang = Integer.parseInt(sc.nextLine());
 			
 			sa[i] = new Sawon(); //초기값이 null 이므로 new 로 생성해야 메소드 호출이 가능하다.
