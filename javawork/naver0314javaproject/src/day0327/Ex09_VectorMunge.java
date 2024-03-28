@@ -104,6 +104,9 @@ public class Ex09_VectorMunge {
 			menu = Integer.parseInt(sc.nextLine());
 		}catch(NumberFormatException e) {
 			System.out.println("번호를 숫자로 입력해주세요");
+			//만약 문자가 입력되면 무조건 전체출력을 해보자
+			//meun = 3;
+			//
 		}
 		return menu;
 
@@ -151,7 +154,12 @@ public class Ex09_VectorMunge {
 		for(int i = 0; i < list.size(); i++) {
 			StudentDto dto = list.get(i);
 			System.out.printf("%d\t %s\t %d\t %d\t %d\t\t %d\t %d\t %.2f\t %s\n", i + 1, dto.getName(), dto.getAge(), dto.getJava(), dto.getSpring(), dto.getHtml(), dto.getTotal(), (double) dto.getAvg(), dto.getGrade());
-
+			/*println으로 출력할경우
+			 * NumberFormat nf = NumberFormat.getInstance();
+			 * nf.setMaximumFractionDigits(1);
+			 * 
+			 * println( nf.format(@@@@);
+			 */
 		}
 		System.out.println("=".repeat(50));
 	}
@@ -162,7 +170,7 @@ public class Ex09_VectorMunge {
 		boolean f = false;
 		for(int i = 0; i < list.size(); i++) {
 			StudentDto dto = list.get(i);
-			while(avg<dto.getAvg()){
+			while(avg<=dto.getAvg()){
 				//if(dto.getName().equals(name) || dto.getName().startsWith(name)) {
 				f=true;
 				System.out.println("이름 : "+dto.getName());
