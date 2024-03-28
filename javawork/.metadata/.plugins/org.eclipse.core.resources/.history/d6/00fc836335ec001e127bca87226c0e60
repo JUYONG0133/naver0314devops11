@@ -1,0 +1,57 @@
+public class StudentDto {
+    private String name;
+    private int age;
+    private int java;
+    private int spring;
+    private int html;
+    private int total;
+    private double avg;
+    private String grade;
+
+    // 기본 생성자
+    public StudentDto() {
+        super();
+    }
+
+    // 매개변수 있는 생성자
+    public StudentDto(String name, int age, int java, int spring, int html) {
+        this.name = name;
+        this.age = age;
+        this.java = java;
+        this.spring = spring;
+        this.html = html;
+        this.total = java + spring + html;
+        this.avg = this.total / 3.0;
+        this.grade = getGrade(this.avg);
+    }
+
+    // getter 메소드 생략
+
+    // java + spring + html 의 합을 반환하는 메소드 getTotal
+    public int getTotal() {
+        return total;
+    }
+
+    // getTotal()/3.0 으로 나눠서 반환하는 메서드 getAvg
+    public double getAvg() {
+        return avg;
+    }
+
+    // getAvg()의 값에 따라 등급을 반환하는 메소드 getGrade
+    public String getGrade() {
+        return grade;
+    }
+
+    // 평균 점수에 따른 등급을 계산하는 메소드
+    private String getGrade(double avg) {
+        if (avg >= 90) {
+            return "*****";
+        } else if (avg >= 80) {
+            return "****";
+        } else if (avg >= 70) {
+            return "***";
+        } else {
+            return "*";
+        }
+    }
+}

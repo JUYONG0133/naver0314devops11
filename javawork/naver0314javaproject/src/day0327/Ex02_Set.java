@@ -1,0 +1,32 @@
+package day0327;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Ex02_Set {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<String> set1 = new HashSet<String>();
+		set1.add("이청아");
+		set1.add("유지태");
+		set1.add("유지태");
+		set1.add("한가인");
+		set1.add("강호동");
+		
+		System.out.println(set1.size());
+		System.out.println("출력 1 for");
+		System.out.println("=".repeat(30));
+		for(String s : set1) {
+			System.out.println(s);
+		}
+		System.out.println("출력 2 Iterator");
+		System.out.println("=".repeat(30));
+		Iterator<String> iter = set1.iterator();
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+	}
+
+}
