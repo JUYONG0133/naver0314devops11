@@ -30,7 +30,6 @@
     <data-source source="LOCAL" name="angel" uuid="b5872c7f-a076-4263-b664-f1263092ee42">
       <driver-ref>oracle.19</driver-ref>
       <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@localhost:1521:XE</jdbc-url>
       <jdbc-additional-properties>
