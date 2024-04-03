@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dbwork/dbwork.iml" filepath="$PROJECT_DIR$/dbwork/dbwork.iml" />
       <module fileurl="file://$PROJECT_DIR$/javawork/naver0314javaproject/naver0314javaproject.iml" filepath="$PROJECT_DIR$/javawork/naver0314javaproject/naver0314javaproject.iml" />
     </modules>
   </component>
