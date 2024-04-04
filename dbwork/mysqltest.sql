@@ -1,0 +1,10 @@
+show databases ;
+create database hello;
+show tables;
+use mysql;
+-- desc user;
+-- select host,user from user;
+use hello;
+drop database hello;
+show databases ;
+create database bit701;
