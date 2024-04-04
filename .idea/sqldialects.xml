@@ -3,6 +3,9 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/dbwork" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/dbwork/console.sql" dialect="OracleSqlPlus" />
+    <file url="file://$PROJECT_DIR$/dbwork/mysql0404.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/dbwork/mysql0404_1.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/dbwork/mysqltest.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/dbwork/scott.sql" dialect="OracleSqlPlus" />
     <file url="file://$PROJECT_DIR$/dbwork/scott0403.sql" dialect="OracleSqlPlus" />
   </component>
