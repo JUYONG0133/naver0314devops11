@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Diphylleia&family=Dokdo&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+
+    <title>Title</title>
+    <style>
+      div.buttons>button{
+        width : 100px;
+        height: 35px;
+        font-size: 1.1em;
+        font-family: 'Dokdo';
+        background-color: aquamarine;
+        color: #99cc00;
+        box-shadow: 5px 5px gray;
+        cursor: pointer;
+      }
+      div.msg{
+        margin-top: 20px;
+        font-size: 30px;
+        text-align: center;
+        width: 400px;
+        height: 100px;
+        line-height: 100px;
+        font-family: 'Gowun Dodum';
+      }
+      div.diva{
+        border: 10px gold groove;
+        background-color: palevioletred;
+        color: cadetblue;
+      }
+      div.divb{
+        border: 10px double forestgreen;
+        box-shadow: 5px 5px 5px orange;
+        font-family: 'Black And White Picture';
+        font-size: 35px;
+        background-color: crimson;
+        color: white;
+      }
+    </style>
+</head>
+<body>
+  <div class="buttons">
+    <button type="button" id="btn1">div-a 적용</button>
+    <button type="button" id="btn2">div-b 적용</button>
+    <button type="button" id="btn3">div-ab 적용</button>
+    <button type="button" id="btn4">모두제거</button>
+  </div>
+  <br>
+  <div class="msg">
+    오늘은 비오는 월요일 입니다.
+  </div>
+<script>
+  let m = document.querySelector("div.msg");
+  document.getElementById("btn1").onclick=function (){
+  m.setAttribute("class","msg diva");
+  }
+  document.getElementById("btn2").onclick=function (){
+    m.setAttribute("class","msg divb");
+  }
+  document.getElementById("btn3").onclick=function (){
+    m.setAttribute("class","msg diva divb");
+  }
+  document.getElementById("btn4").onclick=function (){
+    m.setAttribute("class","msg");
+  }
+</script>
+</body>
+</html>

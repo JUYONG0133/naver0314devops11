@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            let b3 = document.getElementById("btn3");
+            b3.onclick = function () {
+                alert("함수#3 호출");
+            }
+        }
+
+        function test2() {
+            alert("함수#2 호출");
+        }
+    </script>
+</head>
+<body>
+<button type="button" onclick="test()">함수 호출 #1</button>
+<!--body 안에서 함수를 구현할 경우 호출하는 위치보다는 아래에 함수구현-->
+<script>
+    function test() {
+        alert("함수#1 호출");
+    }
+</script>
+<button type="button" onclick="test2()">함수 호출#2</button>
+<button type="button" id="btn3">함수 호출#3</button>
+<button type="button" id="btn4">함수 호출#4</button>
+<script>
+    let b4 = document.getElementById("btn4");
+    b4.onclick=function (){
+        alert("함수#4 호출");
+    }
+</script>
+</body>
+</html>

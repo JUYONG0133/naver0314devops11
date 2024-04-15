@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>html 영역</h2>
+    <script>
+        document.write("<h3 style='color: #cf1234'>자바스크립트 영역</h3>");
+        //var 는 함수형 변수라고 부른다
+        var a = 10;
+        document.write(a);
+        console.log("a="+a);
+        //es6 의 템플릿 리터럴을 이용햇 출력해보자
+        console.log(`a=${a}`);
+        if(true){
+            console.log("a="+a);
+            var a = 20;
+            console.log("a="+a);
+        }
+        console.log("a="+a);
+    </script>
+<hr>
+<script>
+    //let 는 영역형 변수라고 부른다.
+    let b = 10;
+    console.log("b="+b);
+    if(true){
+        let b = 20;
+        console.log("b="+b);
+    }
+    console.log("b="+b);
+</script>
+<h2>자바스크립트 선언시 타입설정 안함, var나 let로 선언</h2>
+<script>
+    let s1 = 10;
+    let s2 = 3.4;
+    let s3 = "hello";
+    let s4 = "5";
+    let s5 = "6";
+    console.log(`s1의 타입은 ${typeof(s1)}입니다`);
+    console.log(`s2의 타입은 ${typeof(s2)}입니다`);
+    console.log(`s3의 타입은 ${typeof(s3)}입니다`);
+    console.log(`s4의 타입은 ${typeof(s4)}입니다`);
+    console.log("s5의 타입은 "+typeof(s5)+"입니다");
+
+    console.log(s4+s5);
+    console.log(s4-s5);
+    console.log(s4*s5);
+
+    //문자열로 선언한 숫자를 더하는 방법
+    console.log(parseInt(s4)+parseInt(s5)); //문자열을 정수타입으로 변경
+    console.log(Number(s4)+Number(s5)); //Number는 숫자로 변경
+</script>
+</body>
+</html>
