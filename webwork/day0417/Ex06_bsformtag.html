@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Diphylleia&family=Dokdo&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Reddit+Mono:wght@200..900&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        body * {
+            font-family: 'Diphylleia';
+            color: dimgray;
+        }
+        .selphoto{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload=function (){
+            let photo = document.querySelector(".largephoto");
+            let pname = document.querySelector(".photoname");
+            document.querySelector(".selwidth").onchange=function (){
+                photo.style.borderWidth=this.value+"px";
+            }
+            document.querySelector(".selcolor").onchange=function (){
+                photo.style.borderColor=this.value;
+            }
+
+            document.querySelector(".selphoto").onchange=function () {
+                photo.setAttribute("src",this.value);
+                let label = this.options[this.selectedIndex].label;
+                pname.innerHTML = "<b>" +label + "</b>";
+            }
+            document.querySelector(".selstyle").onchange=function (){
+                photo.style.borderStyle=this.value;
+            }
+            document.getElementById("ckbold").onclick=function (){
+                if(this.checked){
+                    pname.style.fontWeight='bold';
+                }
+                else{
+                    pname.style.fontWeight='normal';
+                }
+            }
+            document.getElementById("ckunder").onclick=function (){
+                if(this.checked){
+                    pname.style.textDecoration='underline';
+                }
+                else{
+                    pname.style.textDecoration='none';
+                }
+            }
+            document.getElementById("ckitalic").onclick=function (){
+                if(this.checked){
+                    pname.style.fontStyle='italic';
+                }
+                else{
+                    pname.style.fontStyle='normal';
+                }
+            }
+            let photo1 = document.querySelectorAll(".phototest");
+            let detail = document.getElementById("detailphoto");
+
+            //이벤트
+            for(let c of photo1){
+                c.onclick=function (){
+                    let src = this.getAttribute("src");
+                    //alert(src);
+                    //detail의 사진 변경하기
+                    detail.setAttribute("src",src);
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<table style="width: 500px;" class="table table-bordered">
+    <caption align="top"><h6><b>[[사진꾸미기]]</b></h6></caption>
+    <tr>
+        <td style="width: 300px;" rowspan="4" align="center">
+            <img src="../image/talent/15.jpg" width="170px" class="largephoto" style="border: 5px dotted gold">
+        </td>
+        <td style="width: 70px">선 굵기</td>
+        <td>
+            <select class="form-select selwidth">
+                <script>
+                    for (let i = 1; i <= 20; i += 2) {
+                        let s = `<option ${i == 5 ? "selected" : ""} >${i}</option>`;
+                        document.write(s);
+                    }
+                </script>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td>선 색상</td>
+        <td><select class="form-select selcolor">
+            <option value="gold">골드</option>
+            <option value="gray">회색</option>
+            <option value="hotpink">핑크</option>
+            <option value="green">초록</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td>사진</td>
+        <td>
+            <select class="form-select selphoto">
+                <script>
+                    let arr1 = [
+                        ["../image/talent/15.jpg", "설현"],
+                        ["../image/talent/17.jpg", "신민아"],
+                        ["../image/talent/18.jpg", "신세경"],
+                        ["../image/talent/19.jpg", "수지"],
+                        ["../image/talent/2.jpg", "김우빈"],
+                    ];
+                    for(let a of arr1){
+                        let s = `<img src = ${a[0]} width=100 height=80 class="photos" data-bs-toggle="modal" data-bs-target="#myModal" >`;
+                        document.write(`<option value=s>${a[1]}</option>"`);
+                    }
+
+                </script>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>선 종류</td>
+        <td>
+            <select class="form-select selstyle">
+                <script>
+                    let arr2 = [
+                        "solid", "dashed", "dotted", "double", "inset", "groove"
+                    ];
+                    for(let a of arr2){
+                        document.write(`<option ${a=='inset'?"selected":""}>${a}</option>`);
+                    }
+                </script>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <h5 class="photoname">설현</h5>
+        </td>
+        <td colspan="2" align="center">
+            <label>
+                <input type="checkbox" id="ckbold" class="form-check-input">굵게
+            </label>
+            <label>
+                <input type="checkbox" id="ckunder" class="form-check-input">밑줄
+            </label>
+            <label>
+                <input type="checkbox" id="ckitalic" class="form-check-input">이탤릭
+            </label>
+        </td>
+    </tr>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-sm" >
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">자동차 구매하러가기</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <a href="https://www.encar.com/index.do"> <img src = "../image/talent/15.jpg" width="100%" id="detailphoto" ></a>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</table>
+</body>
+</html>

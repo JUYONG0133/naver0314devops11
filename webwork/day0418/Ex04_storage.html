@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Diphylleia&family=Dokdo&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: violet;
+        }
+
+        body * {
+            font-family: 'Diphylleia';
+            color: dimgray;
+        }
+    </style>
+</head>
+<body>
+<h5 class="alert alert-danger">localStorage, seesionStorage 공부</h5>
+<script>
+
+    //localStorage 에 key, value를 저장하는 3가지 방법
+    localStorage.name = "김영자";
+    localStorage["addr"] = "서울";
+    localStorage.setItem("hp","010-1111-2222");
+    //sessionStrong 에 key, value를 저장하는 3가지 방법
+    sessionStorage.name = "캔디";
+    sessionStorage["addr"] = "미국";
+    sessionStorage.setItem("hp","010-4444-5555");
+</script>
+<h6>localStorage의 값 읽어오기</h6>
+<script>
+    document.write("Name : "+localStorage.name+"<br>");
+    document.write("Addr : "+localStorage["addr"]+"<br>");
+    document.write("HP : "+localStorage.getItem("hp")+"<br>");
+</script>
+<h6>sessionStorage의 값 읽어오기</h6>
+<script>
+    document.write("Name : "+sessionStorage.name+"<br>");
+    document.write("Addr : "+sessionStorage["addr"]+"<br>");
+    document.write("HP : "+sessionStorage.getItem("hp")+"<br>");
+</script>
+<button type="button" class="btn btn-danger" id="btn1">localStorage name 삭제</button>
+<button type="button" class="btn btn-outline-danger" id="btn2">localStorage all 삭제</button>
+
+<button type="button" class="btn btn-info" id="btn3">sessionStorage name,addr 삭제</button>
+<button type="button" class="btn btn-outline-info" id="btn4">sessionStorage all 삭제</button>
+
+<script>
+    document.getElementById("btn1").onclick=function (){
+        delete localStorage.name;
+    }
+    document.getElementById("btn2").onclick=function (){
+        delete  localStorage.clear();
+    }
+    document.getElementById("btn3").onclick=function (){
+        delete sessionStorage.name;
+        delete sessionStorage.addr;
+    }
+    document.getElementById("btn4").onclick=function (){
+        delete sessionStorage.clear();
+    }
+</script>
+
+
+</body>
+</html>
