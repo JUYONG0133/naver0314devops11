@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Diphylleia&family=Dokdo&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Reddit+Mono:wght@200..900&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            background-color: dimgray;
+        }
+        body *{
+            font-family: 'Diphylleia';
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h3 class="alert alert-info">Image에 대한 클래스</h3>
+    <img src = "../image/shop/8.jpg" class="img-thumbnail" width="200">
+    <img src = "../image/shop/6.jpg" class="rounded" width="200">
+    <img src = "../image/mainImage/K-039.png" class="rounded-circle" width="200" height="200">
+
+    <h3>table에 대한 클래스</h3>
+    <table style="width: 200px; margin-bottom: 20px;" class="table table-striped">
+        <caption align="top"><b>[표 1]</b></caption>
+        <tr >
+            <th>이름</th>
+            <th>핸드폰</th>
+        </tr>
+        <tr>
+            <th>이영자</th>
+            <th>010-0000-1111</th>
+        </tr>
+        <tr>
+            <th>강호동</th>
+            <th>010-3313-1452</th>
+        </tr>
+    </table>
+    <table style="width: 200px; margin-bottom: 20px;" class="table table-borderde">
+        <caption align="top"><b>[표 2]</b></caption>
+        <tr class="table-secondary">
+            <th>이름</th>
+            <th>핸드폰</th>
+        </tr>
+        <tr class="table-success">
+            <th>이영자</th>
+            <th>010-0000-1111</th>
+        </tr>
+        <tr class="table-danger">
+            <th>강호동</th>
+            <th>010-3313-1452</th>
+        </tr>
+    </table>
+    <table style="width: 200px; margin-bottom: 20px;" class="table table-hover">
+        <caption align="top"><b>[표 3]</b></caption>
+        <tr>
+            <th>이름</th>
+            <th>핸드폰</th>
+        </tr>
+        <tr>
+            <th>이영자</th>
+            <th>010-0000-1111</th>
+        </tr>
+        <tr>
+            <th>강호동</th>
+            <th>010-3313-1452</th>
+        </tr>
+    </table>
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</body>
+</html>

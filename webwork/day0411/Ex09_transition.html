@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Diphylleia&family=Dokdo&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Reddit+Mono:wght@200..900&display=swap"
+          rel="stylesheet">
+    <title>Title</title>
+    <style>
+        body * {
+            font-family: "Black And White Picture";
+        }
+        ul,li{list-style: none;}
+        nav{
+            display: block;
+        }
+        ul{margin-bottom: 30px}
+
+        .menu1 li{
+            background-color: #999;
+            color : #fff;
+            width: 85px;
+            display: block;
+            margin-bottom: 3px;
+            height: 33px;
+            padding: 8px;
+            transition: width 1.5s;
+        }
+        .menu1 li:hover{
+            color: #900;
+            letter-spacing: 3px;
+            width: 400px;
+        }
+
+        .menu2{
+            height: 100px;
+        }
+        .menu2 li{
+            float: left;
+            background-color: #cf1234;
+            color: yellow;
+            margin-right: 3px;
+            width: 85px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            transition: height 1.2s;
+        }
+        .menu2 li:hover{
+            background-color: aqua;
+            height: 100px;
+            color: palevioletred;
+        }
+        .menu3 li{
+            float: left;
+            background-color: magenta;
+            color: darkcyan;
+            margin-right: 3px;
+            width: 85px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            transform: rotate(0deg);
+            transition: all 1.2s;
+        }
+        .menu3 li:hover{
+            background-color: pink;
+            transform: rotate(45deg);
+            color: darkgreen;
+        }
+
+        #main_menu .menu4{
+            color: #333;
+            background-color: #9c0;
+            width: 300px;
+            display: block;
+            text-align: center;
+            padding: 5px;
+            transition: all 0.3s;
+        }
+        #main_menu .menu4 li:hover{
+            color : #cf1234;
+            background-color: burlywood;
+            background: url("../image/mycar/mycar12.png") no-repeat;
+            background-size: 30px 30px;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="menu1">
+    <li>Memu01</li>
+    <li>Memu02</li>
+    <li>Memu03</li>
+    <li>Memu04</li>
+    <li>Memu05</li>
+</ul>
+<div style="clear:both;"></div>
+<ul class="menu2">
+    <li>Memu01</li>
+    <li>Memu02</li>
+    <li>Memu03</li>
+    <li>Memu04</li>
+    <li>Memu05</li>
+</ul>
+<div style="clear:both;"></div>
+<ul class="menu3">
+    <li>Memu01</li>
+    <li>Memu02</li>
+    <li>Memu03</li>
+    <li>Memu04</li>
+    <li>Memu05</li>
+</ul>
+<div style="clear:both;"></div>
+<nav id="main_menu">
+    <ul class="menu4">
+        <li>Memu01</li>
+        <li>Memu02</li>
+        <li>Memu03</li>
+        <li>Memu04</li>
+        <li>Memu05</li>
+    </ul>
+</nav>
+<div style="clear:both;"></div>
+
+</body>
+</html>

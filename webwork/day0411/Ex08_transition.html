@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ex1,#ex2{
+            background-color: blueviolet;
+            width: 110px;
+            height: 20px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #ex1:hover{
+            background-color: deepskyblue;
+            width: 350px;
+        }
+        #ex2:hover{
+            background-color: firebrick;
+            width: 350px;
+        }
+
+        #ex1{
+            transition-property: width;
+            transition-duration: 2s;
+        }
+        #ex2{
+            transition-property: width;
+            transition-duration: 3s;
+        }
+        #ex3 img{
+            width: 120px;
+            opacity: 0.2;
+            border: 5px solid palevioletred;
+            transform: rotate(15deg);
+            cursor: pointer;
+            transition: all 10s;
+        }
+        #ex3 img:hover{
+            opacity: 1.0;
+            border-color: gray;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+<p id = "ex1">Transition Test#1!!</p>
+<p id = "ex2">Transition Test#2!!</p>
+<p id = "ex3">
+    <img src = "../image/mycarimage/car12.png">
+</p>
+</body>
+</html>

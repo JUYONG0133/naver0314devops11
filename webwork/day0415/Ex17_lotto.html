@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .circle {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 40px;
+            margin: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("sel1").onchange = function () {
+                let selectValue = parseInt(this.value);
+                let outputDiv = document.getElementById("output");
+                outputDiv.innerHTML = ""; // Clear previous output
+
+                for (let i = 0; i < selectValue; i++) {
+                    outputDiv.innerHTML += "<div>"; // Start new line
+                    let lotto = generateRandomNumbers(6); // Generate 6 random numbers
+                    lotto.sort((a, b) => a - b); // Sort numbers in ascending order
+                    for (let j = 0; j < lotto.length; j++) {
+                        let color = generateRandomColor(); // Generate random color
+                        outputDiv.innerHTML += `<div class="circle" style="background-color: ${color};">${lotto[j]}</div>`; // Output each number in a circle with random color
+                    }
+                    outputDiv.innerHTML += "</div>"; // End line
+                }
+            }
+        }
+
+        function generateRandomNumbers(count) {
+            let numbers = [];
+            for (let i = 0; i < count; i++) {
+                let num;
+                do {
+                    num = parseInt(Math.random() * 45) + 1; // Generate random number
+                } while (numbers.includes(num)); // Ensure it's not a duplicate
+                numbers.push(num); // Add unique number to array
+            }
+            return numbers.sort((a, b) => a - b); // Sort numbers in ascending order before returning
+        }
+
+        function generateRandomColor() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</head>
+<body>
+
+<select id="sel1">
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            let s = `
+            <option>${i}</option>
+        `;
+            document.write(s);
+        }
+    </script>
+</select>
+
+<hr>
+<div id="output"></div>
+
+</body>
+</html>

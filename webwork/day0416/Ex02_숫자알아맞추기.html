@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.numimage {
+            position: absolute;
+            top: 50px;
+            left: 300px;
+        }
+
+        div.result {
+            position: relative;
+            top: 30px;
+            width: 250px;
+            border: 2px solid gray;
+            padding: 5px;
+            height: auto;
+        }
+    </style>
+    <script>
+        let r, ni, num, rnd, cnt;
+        window.onload = function () {
+            r = document.querySelector(".result");
+            ni = document.querySelector(".numimage");
+            num = document.getElementById("txtnum");
+            init();
+            document.getElementById("btninit").onclick=init;
+
+            num.onkeyup = function (e) {
+
+                if (isNaN(this.value)) {
+                    alert("숫자로 입력허세요");
+                    num.value = "";
+                    return;
+                }
+                //let non = this.value.length;
+                let tag = "";
+                for (let i = 0; i < this.value.length; i++) {
+                    let l = this.value.charAt(i);
+                    tag += `
+                        <img src = "../image/num/${l}.gif">
+                    `;
+                }
+                ni.innerHTML = tag;
+
+                if (e.keyCode == 13) {
+                    check();
+                }
+            }
+            document.getElementById("btnresult").onclick = check;
+        }
+
+        function init() {
+            rnd = parseInt(Math.random() * 100) + 1;
+            cnt = 0;
+            r.innerHTML = "";
+            num.value = "";
+            ni.innerHTML = "";
+        }
+
+        function check() {
+            let n = Number(num.value);
+          //r.innerHTML = n;
+            cnt++;
+            let tag="";
+            if(n>rnd)
+                tag=`${cnt}회 : ${n}보다 작습니다.<br>`;
+            else if(n<rnd)
+                tag=`${cnt}회 : ${n}보다 큽니다.<br>`;
+            else{
+                tag=`정답입니다. <b style="color: red">정답은 : ${rnd}</b><br>`;
+            }
+            r.innerHTML+=tag;
+            num.value="";
+        }
+    </script>
+</head>
+<body>
+<input type="text" style="width: 100px; " autofocus id="txtnum">
+<button type="button" id="btnresult">확인</button>
+<button type="button" id="btninit">초기화</button>
+<hr>
+<div class="numimage"></div>
+<div class="result"></div>
+</body>
+</html>

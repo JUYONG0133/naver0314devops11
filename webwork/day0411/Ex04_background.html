@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width , inital-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Diphylleia&family=Dokdo&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        body *{
+            font-family:'Black And White Picture' ;
+            font-size: 25px;
+        }
+        div.box div{
+            border: 1px solid gray;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        div.box>div.a{
+            background-image: url('../image/mycar/mycar13.png');
+            background-size: 30px 30px;
+            background-repeat: repeat;
+        }
+        div.box>div.b{
+            background-image: url(../image/mycar/mycar2.png);
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        div.box>div.c{
+            background-image: url(../image/mainImage/K-054.png);
+            background-size: 100% 100%;
+            opacity: 0.5; /* 투명도설정 0.0~1.0 ㄲㅏ지 설정가능*/
+        }
+        div.box>div.d{
+            background-image: url(../image/food/11.jpg);
+            background-size: cover;
+
+        }
+        div.box>div.e{
+            background-image: url("../image/mycar/mycar8.png");
+            background-size: contain;
+        }
+        div.box>div.f{
+            background: url("../image/food/2.jpg") no-repeat right top;
+            background-size: 80px 80px;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="a">one</div>
+    <div class="b">two</div>
+    <div class="c">three</div>
+    <div class="d">four</div>
+    <div class="e">five</div>
+    <div class="f">six</div>
+</div>
+
+</body>
+</html>

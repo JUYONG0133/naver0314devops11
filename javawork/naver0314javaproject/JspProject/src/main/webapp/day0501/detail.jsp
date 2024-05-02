@@ -34,9 +34,9 @@
 <body>
 <div style="margin: 10px;width: 500px;">
 
-<%--    <span style="font-size: 14px;color: gray;">--%>
-<%--		등록일 :  <%=sdf.format(dto.getWriteday()) %>--%>
-<%--	</span>--%>
+    <span style="font-size: 14px;color: gray;">
+		등록일 :  <%=sdf.format(dto.getWriteday()) %>
+	</span>
 
     <table>
         <tr>
@@ -48,6 +48,7 @@
                 <h5>스프링 점수 : <%=dto.getSpring()%></h5>
                 <h5>HTML 점수 : <%=dto.getHtml()%></h5>
                 <h5>총점수 : <%=dto.getHtml()+dto.getSpring()+dto.getJava()%></h5>
+                <h5>평 균 : <%=String.format("%.2f",(dto.getHtml()+dto.getSpring()+dto.getJava())/3.0)%></h5>
             </td>
         </tr>
         <tr>
@@ -58,26 +59,27 @@
 
                 <button type="button" class="btn btn-outline-danger btn-sm"
                         style="width: 80px;"
-                        onclick="location.href='updateform.jsp?shopidx=<%=dto.getNum()%>'">수정</button>
+                        onclick="location.href='updateform.jsp?num=<%=dto.getNum()%>'">수정</button>
 
                 <button type="button" class="btn btn-outline-danger btn-sm"
                         style="width: 80px;"
-                        shopidx="<%=num%>" id="delshop">삭제2</button>
+                        num="<%=num%>" id="delstu" name="<%=dto.getName()%>">삭제</button>
 
                 <button type="button" class="btn btn-outline-danger btn-sm"
                         style="width: 80px;"
-                        onclick="location.href='shopform.jsp'">상품추가</button>
+                        onclick="location.href='writeform.jsp'">상품추가</button>
             </td>
         </tr>
     </table>
 </div>
 <script type="text/javascript">
     //삭제2버튼 이벤트
-    $("#delshop").click(function(){
-        let shopidx=$(this).attr("shopidx");
-        let a=confirm(`\${shopidx} 번 상품을 삭제할까요?`);//jsp에서는 $기능이 이미 있으므로 스크립트에서 변수를 넣을경우 \${변수명}
+    $("#delstu").click(function(){
+        let num=$(this).attr("num");
+        let name=$(this).attr("name");
+        let a=confirm(`\${name} 사원정보를  삭제할까요?`);//jsp에서는 $기능이 이미 있으므로 스크립트에서 변수를 넣을경우 \${변수명}
         if(a){
-            location.href="shopdelete.jsp?shopidx="+shopidx;//페이지 이동
+            location.href="delete.jsp?num="+num;//페이지 이동
         }
     });
 </script>
