@@ -1,6 +1,8 @@
 package data.dto;
 
-public class caroption {
+import java.sql.Timestamp;
+
+public class CaroptionDto {
 
     private int num;
     private String userid;
@@ -10,6 +12,7 @@ public class caroption {
     private String carkey;
     private String caroption;
     private String etc;
+    private Timestamp writeday;
 
     public int getNum() {
         return num;
@@ -73,5 +76,13 @@ public class caroption {
 
     public void setEtc(String etc) {
         this.etc = etc;
+    }
+
+    public Timestamp getWriteday() {
+        return writeday;
+    }
+
+    public void setWriteday(Timestamp writeday) {
+        this.writeday = writeday;
     }
 }

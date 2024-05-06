@@ -1,6 +1,5 @@
 package data.dao;
 
-import data.dto.SawonDto;
 import data.dto.StudentDto;
 
 import db.common.MysqlConnect;

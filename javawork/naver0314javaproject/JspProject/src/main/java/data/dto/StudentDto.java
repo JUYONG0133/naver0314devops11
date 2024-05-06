@@ -75,4 +75,6 @@ public class StudentDto {
     public void setWriteday(Timestamp writeday) {
         this.writeday = writeday;
     }
+
+
 }
