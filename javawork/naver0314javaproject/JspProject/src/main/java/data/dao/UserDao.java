@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
     private MysqlConnect db = new MysqlConnect();
@@ -86,6 +88,32 @@ public class UserDao {
         }
 
         return loginSuccess;
+    }
+
+    // 사용자 이름 조회 메서드
+    public String findUsernameById(String userid) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        String username = null;
+
+        try {
+            conn = db.getConnection();
+            String sql = "SELECT username FROM user WHERE userid=?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, userid);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                username = rs.getString("username");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("사용자 이름 조회 중 오류 발생: " + e.getMessage());
+        } finally {
+            db.dbClose(rs, pstmt, conn); // 리소스 닫기
+        }
+
+        return username;
     }
 
 }
