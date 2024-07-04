@@ -73,25 +73,7 @@ public class BoardWriteController {
             HttpSession session
     )
     {
-//		//업로드할 폴더
-//		String saveFolder=request.getSession().getServletContext().getRealPath("/save");
-//		//업로드하지 않았을경우 "no",업로드했을경우 랜덤파일명으로 저장
-//		String photo=upload.getOriginalFilename();
-//		if(photo.equals("")) {
-//			photo="no";
-//		}else {
-//			//확장자 분리
-//			String ext=photo.split("\\.")[1];
-//			photo=UUID.randomUUID()+"."+ext;
-//
-//			//실제 폴더에 업로드
-//			try {
-//				upload.transferTo(new File(saveFolder+"/"+photo));
-//			} catch (IllegalStateException | IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
+
         String photo=storageService.uploadFile(bucketName, folderName, upload);
         dto.setUploadphoto(photo);
 

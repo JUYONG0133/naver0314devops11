@@ -55,14 +55,8 @@
             </td>
             <td><!-- 제목 -->
                 <a href="./detail?num=${dto.num}&currentPage=${currentPage}">
-                    <!-- relevel 한개당 두칸띄우기 -->
-                    <c:forEach begin="1" end="${dto.relevel}">
-                        &nbsp;&nbsp;
-                    </c:forEach>
-                    <!-- 답글일경우 답글 이미지 -->
-                    <c:if test="${dto.restep>0}">
-                        <img src="../image/re.png">
-                    </c:if>
+
+
                     <!-- 제목 -->
                         ${dto.subject}
                     <!-- 사진이 있을경우 아이콘 표시 -->

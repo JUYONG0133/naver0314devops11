@@ -85,8 +85,8 @@ public class ReBoardService {
     public void updateBoard(ReBoardDto dto){
         boardMapper.updateBoard(dto);
     }
-    public void deleteBoard(int num){
+        public void deleteBoard(int num){
 
-        boardMapper.deleteBoard(num);
-    }
+            boardMapper.deleteBoard(num);
+        }
 }

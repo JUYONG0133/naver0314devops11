@@ -31,11 +31,19 @@
             color: gray;
             font-size: 0.9em;
         }
+        div.trans{
+            position: absolute;
+            top: 150px;
+            left: 550px;
+            width: 600px;
+
+        }
     </style>
     <script type="text/javascript">
         $(function(){
             //처음 로딩시 댓글 목록 출력
             answer_list();
+            trans_text();
 
             //댓글 추가 버튼
             $("#btnansweradd").click(function(){
@@ -77,7 +85,35 @@
                     })
                 }
             });
+            $("#seltrans").change(function (){
+                trans_text();
+            });
         });
+        function trans_text(){
+            let text = `${dto.content}`;
+            let lang = $("#seltrans").val();
+            console.log(text);
+            console.log(lang);
+
+            $.ajax({
+                type:"post",
+                dataType:"text",
+                url:"./trans",
+                data:{"text":text,"lang":lang},
+                success:function (data){
+                    console.log(data);
+
+
+                    let m = JSON.parse(data);
+                    let s = m.message.result.translatedText;
+
+                    console.log(s);
+
+                    $("#trans_lang").html(s);
+                }
+
+            });
+        }
 
         function answer_list(){
             let num=${dto.num};
@@ -126,13 +162,26 @@
 <c:set var="stpath" value="https://kr.object.ncloudstorage.com/bitcamp-bucket-56/photocommon"/>
 
 <body>
+<div class="trans">
+    <div class="input-group">
+        <b>번역할 언어 선택</b>&nbsp;
+        <select id="seltrans" class="form-select" style="width: 130px; margin-left: 10px;">
+        <option value="en">영어</option>
+        <option value="ja">일어</option>
+        <option value="zh-CN">중국어</option>
+        <option value="es">스페인어</option>
+        </select>
+    </div>
+    <pre id="trans_lang" style="margin-top: 20px; font-size: 25px; white-space: pre-wrap;word-wrap: break-word;"></pre>
+</div>
+
 <table class="table" style="width: 500px;">
     <tr>
         <td>
             <h2><b>${dto.subject}</b></h2>
             <!-- 프로필 사진 -->
             <img src="${stpath}/${profile_photo}"
-                 onerror="this.src='../image/noimage2.png'"
+                 onerror="this.src='../image/image1.png'"
                  style="width: 45px;height: 45px;margin-right:5px;"
                  class="rounded-circle" align="left">
             <b>${dto.writer}</b><br>
@@ -153,7 +202,7 @@
         <td>
             <c:if test="${dto.uploadphoto!='no'}">
                 <img src="${stpath}/${dto.uploadphoto}"
-                     onerror="this.src='../image/noimage2.png'"
+                     onerror="this.src='../image/image1.png'"
                      style="max-width: 300px;">
                 <br><br>
             </c:if>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Everland - Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+</style>
+<body>
+    <header>
+        <h1>Everland</h1>
+        <nav>
+            <ul>
+                <li><a href="everland.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Find Your Way to Everland</h2>
+        <p>Here's how to get to Everland:</p>
+        <div id="map">
+            <!-- 지도 표시 영역 -->
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -17,7 +17,7 @@ public class FormReadController {
     @GetMapping("/form2")
     public String form2(){
 
-        return "form3/myform2";
+        return "form2/myform2";
     }
 
     //    -------------------------------------

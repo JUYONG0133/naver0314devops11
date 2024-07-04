@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
     <entry loc="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home" stamp="1705467970000"/>
+    <entry loc="/Users/macbook/Library/Java/JavaVirtualMachines/azul-11.0.23/Contents/Home" stamp="1716425742805"/>
     <entry loc="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home" stamp="1618959449000"/>
+    <entry loc="/Library/Java/JavaVirtualMachines/zulu-11-x68.jdk/Contents/Home" stamp="1712647784000"/>
+    <entry loc="/Users/macbook/Library/Java/JavaVirtualMachines/corretto-11.0.23/Contents/Home" stamp="1715840937013"/>
     <entry loc="/Users/macbook/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.10.v20240120-1143" stamp="1710394810945"/>
-    <entry loc="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home" stamp="1704463468000"/>
+    <entry loc="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home" stamp="1715829171445"/>
     <entry loc="/Users/macbook/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home" stamp="1714010961715"/>
     <entry loc="/Users/macbook/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents/Home" stamp="1711959679020"/>
     <entry loc="/Users/macbook/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.10.v20240120-1143/jre" stamp="1710394810943"/>
+    <entry loc="/Users/macbook/Library/Java/JavaVirtualMachines/jbr-17.0.11/Contents/Home" stamp="1718784955395"/>
 </dirs>
