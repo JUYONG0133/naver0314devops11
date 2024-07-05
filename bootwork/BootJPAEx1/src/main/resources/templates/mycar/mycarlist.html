@@ -39,11 +39,16 @@
     <tr th:each="dto,iter:${list}">
         <td>[[${iter.count}]]</td>
         <td>
+            <a th:href="@{./detail(num=${dto.num})}" style="cursor: pointer;color: black;text-decoration: none;">
             <img th:src="@{https://yjdigywp3712.edge.naverncp.com/myzEa7LRwa/mycar/{photo}?type=f&w=40&h=40&faceopt=true&ttype=jpg(photo=${dto.carphoto})}"
             hspace="10" border="1"
             >
 
-            [[${dto.carname}]]
+            [[${dto.carname}]]&nbsp;
+                <span th:if="${dto.commentcount}>0" style="color: red;">
+                    [[${dto.commentcount}]]
+                </span>
+            </a>
         </td>
       <td align="right"> <span th:text="${#numbers.formatInteger(dto.carprice,0,'COMMA')}"></span></td>
         <td align="center">
@@ -54,6 +59,12 @@
         <td>[[${dto.carguip}]]</td>
     </tr>
 </table>
+
+<button type="button" class="btn btn-sm btn-success" th:onclick="|location.href='@{./list}'|">홈</button>
+<div th:if="${pageSize<totalcount}">
+    <button type="button" class="btn btn-sm btn-danger" th:onclick="|location.href='@{./list(more=3)}'|">more</button>
+</div>
+
 </body>
 </html>
 
