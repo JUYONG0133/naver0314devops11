@@ -12,30 +12,37 @@ const EigthApp = () => {
     return (
         <div>
             <Alert>EightApp-table 을 이용해서 출력</Alert>
-            {
-                personArray.map((item,idx)=>
+
                     <table className="table table-bordered" style={{width: '400px'}}>
-                        <tr>
-                            <th>이름 :</th>
-                            <td>{item.pname}</td>
-                        </tr>
-                        <tr>
-                            <th>사진 :</th>
-                            <td>
-                                <img alt="" src={require(`../image/${item.photo}`)} className='smallphoto'/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>주소 : </th>
-                            <td>{item.addr}</td>
-                        </tr>
-                        <tr>
+                        <thead>
+                        <tr className="table-danger">
+                            <th>번호</th>
+                            <th>이름</th>
+                            <th>사진</th>
+                            <th>주소</th>
                             <th>나이</th>
-                            <td>{item.age}</td>
+
                         </tr>
+                        </thead>
+                        {
+                            personArray.map((item,idx)=>
+                        <tbody>
+                        <tr>
+
+
+                            <td>{idx + 1}</td>
+                            <td>{item.pname}</td>
+                            <img alt="" src={require(`../image/${item.photo}`)} className='smallphoto'/>
+                            <td>{item.addr}</td>
+                            <td>{item.age}</td>
+
+                        </tr>
+                        </tbody>
+                            )}
+
                     </table>
-                )
-            }
+
+
         </div>
     );
 };
