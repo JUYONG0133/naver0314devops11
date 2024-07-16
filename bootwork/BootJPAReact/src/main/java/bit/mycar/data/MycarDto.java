@@ -28,13 +28,12 @@ public class MycarDto {
     private int carprice; // name이 변수명이랑 같을 경우 생략함
 
     @Column(length = 20) // string형의 크기 지정같은 경우 기본값이 있지만 그냥 지정해줌
-
     private String carcolor;
-    @Column(length = 20)
 
+    @Column(length = 20,updatable = false)
     private String carguip;
 
-    @Column(length = 100) // 얘는 uuid로 할거같아서 100byte 준듯?
+    @Column(length = 100,updatable = false) // 얘는 uuid로 할거같아서 100byte 준듯?
     private String carphoto;
 
 

@@ -15,10 +15,20 @@ public class MycarDao {
     private MyCarDaoInter myCarDaoInter;
 
     public List<MycarDto> getAllDatas(){
-
-
-
         return myCarDaoInter.findAll(Sort.by(Sort.Direction.DESC,"num"));   //  번호의 내림차순임
     }
 
+    public void insertMycar(MycarDto dto){
+        myCarDaoInter.save(dto);
+    }
+
+    public void deleteMycar(Long num){
+        myCarDaoInter.deleteById(num);
+    }
+    public MycarDto getData(Long num){
+        return myCarDaoInter.getReferenceById(num);
+    }
+    public void updateMycar(MycarDto dto){
+        myCarDaoInter.save(dto);
+    }
 }
